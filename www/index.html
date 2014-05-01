@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html manifest="/app.manifest">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Meteor Rider Example</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Meteor Rider, Loading</h1>
+            Loading....
+            <div id="phonegapapp-test" style="display: none;">
+              <!-- put whatever native device testing you want here, easy to toggle in phonegapapp.js -->
+            </div>
+        </div>
+        <!-- include the core cordova JS file for your app, like normal -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- any other custom "on device" code here -->
+        <!-- ... -->
+        <!-- jquery or zepto libraries, as a MeteorRider dependancy -->
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+        <!-- basics for our phonegapapp (Native, on Device JS) -->
+        <script type="text/javascript" src="js/phonegapapp.js"></script>
+        <!-- this JS file, the code needed for MeteorRider -->
+        <script type="text/javascript" src="js/meteor-rider.js"></script>
+        <script type="text/javascript">
+          /**
+           * Configuration is very simple... we need to know the meteorUrl
+           * and your Meteor App might want to know what version of phonegap you are on
+           * and your Meteor App might want to know what version of your phonegap app you are on
+           */
+          var __MeteorRiderConfig__ = {
+            meteorUrl:  "http://leaderboard.meteor.com/",
+            phonegapVersion: 3.0,
+            phonegapAppVersion: 0.1
+          };
+
+          /**
+            * Start up the phonegap
+            */
+           phonegapapp.initialize();
+        </script>
+    </body>
+</html>
