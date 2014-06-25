@@ -19,6 +19,12 @@
 
     <access origin="*"/>
 
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
+    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.7" />
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+
 
     <!-- to enable individual permissions use the following examples -->
     <feature name="http://api.phonegap.com/1.0/battery"/>
